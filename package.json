@@ -1,0 +1,11 @@
+{
+  "name": "@moroccan-oss/react-stoon",
+  "version": "1.0.1",
+  "description": "handy toolbox of reusable React Components",
+  "main": "index.js",
+  "author": "@moroccan-oss",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.2.0"
+  }
+}
