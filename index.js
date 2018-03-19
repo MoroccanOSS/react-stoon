@@ -1,6 +1,4 @@
-import LifeCycleAware from "./LifeCycleAware";
-import Repeat from "./Repeat";
-import Show from "./Show";
-import Switch from "./Switch";
-
-export { LifeCycleAware, Repeat, Show, Switch };
+export {default as LifeCycleAware} from "./LifeCycleAware";
+export {default as Repeat} from "./Repeat";
+export {default as Show} from "./Show";
+export {default as Switch} from "./Switch";
