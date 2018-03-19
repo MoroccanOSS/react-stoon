@@ -3,23 +3,6 @@ import React, {
 	Children,
 } from 'react';
 
-export const Repeat = (props) => {
-	const { $, times, key = indexAsKey, children } = props;
-	return [...Array(times)].map(
-		(el, index) => {
-			return (
-				<$ key={key(index)} {...props}>
-					{children}
-				</$>
-			);
-		}
-	);
-
-	function indexAsKey(index) {
-		return index;
-	}
-}
-
 export class Switch extends Component {	
 	render() {
 		const props  = this.props;
