@@ -3,19 +3,6 @@ import React, {
 	Children,
 } from 'react';
 
-export const Show = (props) => {
-	const { $, if: visible, children } = props;
-	if(visible) {
-		return (
-			<$ {...props}>
-				{children}
-			</$>
-		);
-	} else {
-		return null;
-	}
-}
-
 export class LifeCycleAware extends Component {
 
 	constructor(props) {
