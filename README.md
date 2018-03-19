@@ -1,5 +1,25 @@
 # react-stoon
 
+<p align="center">
+    <a href="https://www.npmjs.com/package/@moroccan-oss/react-stoon">
+        <img src="https://img.shields.io/npm/v/@moroccan-oss/react-stoon.svg"
+            alt="npm version">
+    </a>
+    <a href="https://github.com/@moroccan-oss/react-stoon/blob/master/LICENSE.md">
+        <img src="https://img.shields.io/npm/l/@moroccan-oss/react-stoon.svg"
+            alt="license">
+    </a>
+    <a href="https://david-dm.org/MoroccanOSS/react-stoon">
+        <img src="https://david-dm.org/MoroccanOSS/react-stoon/status.svg"
+            alt="dependency status">
+    </a>
+    <a href='https://gitter.im/MoroccanOSS/react-stoon?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge'>
+        <img src='https://badges.gitter.im/MoroccanOSS/react-stoon.svg'
+            alt='Join the chat at https://gitter.im/MoroccanOSS/react-stoon'>
+    </a>
+</p>
+
+
 react-stoon is a handy toolbox of reusable Components that allow you to reduce boilerplate by writing less js inside of your React Components.
 
 
