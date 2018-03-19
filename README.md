@@ -10,7 +10,7 @@ react-stoon is a fast growing toolbox inspiring to be your lodash for React.
 
 renders `$` only if `if` is truthy.
 
-```
+```jsx
 const MyComponent = ({ shouldShowText }) => {
     return (
         <Show
@@ -27,15 +27,15 @@ const MyComponent = ({ shouldShowText }) => {
 
 creates `times` copies of `$`.
 
-```
+```jsx
 const MyComponent = () => {
     return (
-        <Show
+        <Repeat
         $={Text}
         times={5}
         >
             This Text will be repeated 5 times
-        </Show>
+        </Repeat>
     );
 }
 ```
@@ -44,7 +44,7 @@ const MyComponent = () => {
 
 renders `Switch.Case` if `value` matches `target`.
 
-```
+```jsx
 const MyComponent = () => {
     return (
         <Switch
@@ -72,7 +72,7 @@ const MyComponent = () => {
 
 allows you to use React's lifecycle Hooks without turning your component to a class.
 
-```
+```jsx
 const MyComponent = () => {
     return (
         <LifeCycleAware
