@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class LifeCycleAware extends Component {
+export default class LifeCycleAware extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -28,5 +28,3 @@ class LifeCycleAware extends Component {
 		);
 	}
 }
-
-export default LifeCycleAware;

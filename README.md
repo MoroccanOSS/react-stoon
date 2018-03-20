@@ -23,7 +23,7 @@
 react-stoon is a handy toolbox of reusable Components that allow you to reduce boilerplate by writing less js inside of your React Components.
 
 
-react-stoon is a fast growing toolbox inspiring to be your lodash for React.
+react-stoon is a fast growing toolbox aspiring to be your lodash for React.
 
 
 ### Show

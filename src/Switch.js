@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Switch extends Component {	
+export default class Switch extends React.Component {	
 	render() {
 		const props  = this.props;
 		const { $, target, children = [] } = props;
@@ -28,5 +28,3 @@ class Switch extends Component {
 		}
 	}
 }
-
-export default Switch;
