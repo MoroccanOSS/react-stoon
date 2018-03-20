@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class LifeCycleAware extends Component {
+export default class LifeCycleAware extends React.Component {
 
 	constructor(props) {
 		super(props);

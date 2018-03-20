@@ -1,4 +1,4 @@
-export LifeCycleAware  from './LifeCycleAware';
-export Repeat from './Repeat';
-export Show from './Show';
-export Switch from './Switch';
+export { default as LifeCycleAware }  from './LifeCycleAware';
+export { default as Repeat } from './Repeat';
+export { default as Show } from './Show';
+export { default as Switch } from './Switch';
