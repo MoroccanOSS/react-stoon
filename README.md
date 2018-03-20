@@ -1,12 +1,12 @@
 # react-stoon
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/@moroccan-oss/react-stoon">
-        <img src="https://img.shields.io/npm/v/@moroccan-oss/react-stoon.svg"
+    <a href="https://www.npmjs.com/package/react-stoon">
+        <img src="https://img.shields.io/npm/v/react-stoon.svg"
             alt="npm version">
     </a>
-    <a href="https://github.com/@moroccan-oss/react-stoon/blob/master/LICENSE.md">
-        <img src="https://img.shields.io/npm/l/@moroccan-oss/react-stoon.svg"
+    <a href="https://github.com/MoroccanOSS/react-stoon/blob/master/LICENSE">
+        <img src="https://img.shields.io/npm/l/react-stoon.svg"
             alt="license">
     </a>
     <a href="https://david-dm.org/MoroccanOSS/react-stoon">
