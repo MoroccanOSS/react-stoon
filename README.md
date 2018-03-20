@@ -25,6 +25,12 @@ react-stoon is a handy toolbox of reusable Components that allow you to reduce b
 
 react-stoon is a fast growing toolbox aspiring to be your lodash for React.
 
+## Install
+
+```
+npm install react-stoon --save
+```
+
 
 ### Show
 
