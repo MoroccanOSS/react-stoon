@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default Show = (props) => {
+export default (props) => {
 	const { $, if: visible, children } = props;
 	if(visible) {
 		return (
