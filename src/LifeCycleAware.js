@@ -19,12 +19,7 @@ export default class LifeCycleAware extends React.Component {
 		return this.willMount && this.willMount();
 	}
 	
-	render(props) {
-		const { $, children } = this.props;
-		return (
-			<$ {...this.props}>
-				{children}
-			</$>
-		);
+	render() {
+		return this.props.children;
 	}
 }
