@@ -39,11 +39,8 @@ renders `$` only if `if` is truthy.
 ```jsx
 const MyComponent = ({ shouldShowText }) => {
     return (
-        <Show
-        $={Text}
-        if={shouldShowText}
-        >
-            You can see this text, only if props.if is true
+        <Show if={shouldShowText}>
+            <Text>You can see this text, only if shouldShowText is truthy</Text>
         </Show>
     );
 }
@@ -51,16 +48,45 @@ const MyComponent = ({ shouldShowText }) => {
 
 ### Repeat
 
-creates `times` copies of `$`.
+#### foearch
+
+creates a clone of `props.children` for each element of `props.foreach` while passing the current object as a prop with the alias defined by `as`.
 
 ```jsx
+const Book = ({children, book}) => {
+    return (
+        <div>
+            <div>Book name {book}</div>
+        </div>
+    )
+};
+const books = ['Clean Code', 'Code Complete', 'The pragmatic programmer'];
 const MyComponent = () => {
     return (
-        <Repeat
-        $={Text}
-        times={5}
-        >
-            This Text will be repeated 5 times
+        <Repeat foreach={books} as='book'>
+            <Book />
+        </Repeat>
+    );
+}
+```
+
+#### times
+
+creates `times` copies of `props.children` while passing the index as a prop with the alias defined by `as`.
+
+```jsx
+const MyDiv = ({children, index}) => {
+    return (
+        <div>
+            <div>Element Number {index}</div>
+            <div>{children}</div>
+        </div>
+    )
+};
+const MyComponent = () => {
+    return (
+        <Repeat times={5} as='index'>
+            <MyDiv />
         </Repeat>
     );
 }
@@ -68,27 +94,21 @@ const MyComponent = () => {
 
 ### Switch
 
-renders `Switch.Case` if `value` matches `target`.
+renders `Switch.Case` if `value` matches `target`, renders `Switch.Default` if none matched.
 
 ```jsx
 const MyComponent = () => {
     return (
-        <Switch
-        $={Div}
-        target='Hello'
-        >
-            <Switch.Case
-            $={Text}
-            value='Hey'
-            >
-                the target equals Hey
+        <Switch target={message}>
+            <Switch.Case value='hey'>
+                It's hey!
             </Switch.Case>
-            <Switch.Case
-            $={Text}
-            value='Hello'
-            >
-                the target equals Hello
+            <Switch.Case value='hello'>
+                It's hello!
             </Switch.Case>
+            <Switch.Default>
+                It's neither hey nor hello !
+            </Switch.Default>
         </Switch>
     );
 }
@@ -102,11 +122,10 @@ allows you to use React's lifecycle Hooks without turning your component to a cl
 const MyComponent = () => {
     return (
         <LifeCycleAware
-        $={Text}
         willMount={() => console.log('Will Mount!')}
         didMount={() => console.log('Did Mount!')}
         >
-            Hello, I am a LifecycleAwareComponent!
+            <Text>Hello, I am a LifecycleAwareComponent!</Text>
         </LifeCycleAware>
     );
 }

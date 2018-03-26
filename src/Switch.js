@@ -2,29 +2,20 @@ import React from 'react';
 
 export default class Switch extends React.Component {	
 	render() {
-		const props  = this.props;
-		const { $, target, children = [] } = props;
-		const Cases = React.Children.map(
-			children,
-			child => React.cloneElement(child, { target: target })
+		const { target, children = [] } = this.props;
+		const defaultCase = children.filter(
+			child => (child.type === Switch.Default)
 		);
-		return (
-			<$ {...props}>
-				{Cases}
-			</$>
+		const cases = children.filter(
+			child => ((child.type === Switch.Case) && (child.props.value === target))
 		);
+		return (cases.length)? cases : defaultCase;
 	}
 
-	static Case(props) {
-		const { $, value, target, children } = props;
-		if(target === value) {
-			return (
-				<$ {...props}>
-					{children}
-				</$>
-			);
-		} else {
-			return null;
-		}
+	static Case({ children }) {
+		return children;
+	}
+	static Default({ children }) {
+		return children;
 	}
 }
