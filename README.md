@@ -143,3 +143,21 @@ const MyComponent = () => {
     );
 }
 ```
+
+
+### Promiser
+
+```jsx
+
+const MyComponent = () => {
+    return (
+      <Promiser
+        preload={true}
+        preloadComponent={<Preloader />}
+        promise={getUser("younesshakky")}
+        catch={err => <ErrorComponent message={err.message}/>}
+        render={user => <UserInfo user={user} />}
+      />
+    );
+}
+```
