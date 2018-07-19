@@ -45,6 +45,19 @@ const MyComponent = ({ shouldShowText }) => {
     );
 }
 ```
+### Hide
+
+hides `$` only if `if` is truthy.
+
+```jsx
+const MyComponent = ({ shouldNotShowText }) => {
+    return (
+        <Hide if={shouldNotShowText}>
+            <Text>You can see this text, only if shouldNotShowText is false</Text>
+        </Hide>
+    );
+}
+```
 
 ### Repeat
 
